@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rem.mapper.ScMapper">
+
+    <select id="querryAll" resultType="com.rem.entry.SC">
+        select * from sc;
+    </select>
+
+    <select id="selectByGrade" resultType="com.rem.entry.SC" parameterType="int">
+        select * from sc where Grade = #{grade};
+    </select>
+
+    <insert id="insertIntoSC" parameterType="com.rem.entry.SC">
+        insert  into SC values (#{Sno,jdbcType=VARCHAR},#{Cno,jdbcType=VARCHAR},#{Grade});
+    </insert>
+</mapper>
