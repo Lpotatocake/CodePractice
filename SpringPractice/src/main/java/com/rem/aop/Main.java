@@ -5,5 +5,6 @@ public class Main {
         MyCalcImpl myCalc = new MyCalcImpl();
         //myCalc calc = CalcProxy.getInstance(myCalc)
         System.out.println("hello world");
+        System.out.println("hot-fix branch");
     }
 }
